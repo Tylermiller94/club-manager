@@ -1,0 +1,6 @@
+<h2>Club Manager - User List</h2>
+<div *ngFor="let user of users | async" class="panel panel-default">
+  <div class="panel-body">
+   <em>{{user.name}}</em>
+  </div>
+</div>

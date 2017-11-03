@@ -7,10 +7,16 @@ import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppComponent } from './app.component';
+import { AboutComponent } from './about/about.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent,
+    WelcomeComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
