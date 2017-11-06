@@ -9,10 +9,14 @@ import { Router } from '@angular/router';
 })
 
 export class MemberlistComponent {
+  constructor(private router: Router){}
   members: Member[] = [
    new Member("James", "president"),
    new Member("Charlie", "Vice-president"),
    new Member("Momiji", "Treasurer"),
 
  ];
+ goToDetailPage(clickedMember: Member) {
+   this.router.navigate(['members']);
+ };
 }
