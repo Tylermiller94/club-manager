@@ -1,6 +1,12 @@
-<h2>Club Manager - User List</h2>
-<div *ngFor="let user of users | async" class="panel panel-default">
+<h2>Club Manager - Member List</h2>
+<!-- <div *ngFor="let user of users | async" class="panel panel-default">
   <div class="panel-body">
    <em>{{user.name}}</em>
+  </div>
+</div> -->
+
+<div *ngFor="let member of members">
+  <div class="panel-body">
+    <h3><em>{{album.name}}</em> by {{album.title}}</h3>
   </div>
 </div>

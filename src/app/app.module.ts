@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { MemberDetailComponent } from './member-detail/member-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     WelcomeComponent,
-    UserListComponent
+    UserListComponent,
+    MemberDetailComponent
   ],
   imports: [
     BrowserModule,
