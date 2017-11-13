@@ -1,0 +1,12 @@
+
+<h3>Edit Member</h3>
+<label>Member Name:</label>
+<input [(ngModel)]="selectedMember.name">
+<br>
+
+<label>Member Title:</label>
+<input [(ngModel)]="selectedMember.title">
+<br>
+
+<button (click)="beginUpdatingMember(selectedMember)" class="btn btn-info">Update</button>
+<button (click)="beginDeletingMember(selectedMember)" class="btn btn-danger">Delete</button>

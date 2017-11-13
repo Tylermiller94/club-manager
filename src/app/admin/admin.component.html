@@ -9,12 +9,19 @@
         <br>
         <input #newName>
       </div>
+      <br>
       <div>
         <label>Member Title:</label>
         <br>
         <input #newTitle>
       </div>
+      <br>
       <button (click)="submitForm(newName.value, newTitle.value); newName.value=''; newTitle.value=''">Add</button>
     </div>
+
   </div>
+</div>
+
+<div>
+  <app-member-list></app-member-list>
 </div>
