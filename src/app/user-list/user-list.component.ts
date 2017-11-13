@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Member } from '../member.model'
 import { Router } from '@angular/router';
+import { MemberService } from '../member.service';
+
 
 @Component({
   selector: 'app-user-list',
@@ -8,14 +10,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-list.component.css']
 })
 
-export class MemberlistComponent {
-  constructor(private router: Router){}
-  members: Member[] = [
-   new Member("James", "president", 1),
-   new Member("Charlie", "Vice-president", 2),
-   new Member("Momiji", "Treasurer", 3),
+export class UserlistComponent implements OnInit {
+  members: Member[];
 
- ];
+  constructor(private router: Router, private memberService: MemberService){}
+
+  ngOnInit(){
+    this.members = this.memberService.getMembers();
+  }
+
  goToDetailPage(clickedMember: Member) {
    this.router.navigate(['members','clickedMember.id']);
  };
