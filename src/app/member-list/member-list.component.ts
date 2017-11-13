@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Member } from '../member.model';
 import { Router } from '@angular/router';
@@ -12,6 +13,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 export class MemberListComponent implements OnInit {
  members: FirebaseListObservable<any[]>;
+ currentRoute: string = this.router.url;
 
  constructor(private router: Router, private memberService: MemberService) { }
 
@@ -19,8 +21,8 @@ export class MemberListComponent implements OnInit {
     this.members = this.memberService.getMembers();
   }
 
-  goToDetailPage(clickedMember: Member) {
-    this.router.navigate(['members', clickedMember.id]);
+  goToDetailPage(clickedMember) {
+    this.router.navigate(['members', clickedMember.$key]);
   }
 
 }

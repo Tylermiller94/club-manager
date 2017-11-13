@@ -1,18 +1,31 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { MemberListComponent } from './user-list/user-list.component';
 import { AboutComponent } from './about/about.component';
+import { MemberListComponent } from './member-list/member-list.component';
 import { MemberDetailComponent } from './member-detail/member-detail.component';
+import { AdminComponent }   from './admin/admin.component';
 
 const appRoutes: Routes = [
   {
-    path: 'members/:id',
+    path: '',
     component: WelcomeComponent
   },
   {
-    path: 'users',
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: 'members',
     component: MemberListComponent
+  },
+  {
+    path: 'members/:id',
+    component: MemberDetailComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   }
 ];
 

@@ -1,4 +1,4 @@
 <div>
-  <h3>{{albumToDisplay.name}}</h3>
-  <h4>{{albumToDisplay.title}}</h4>
+  <h1>{{(memberToDisplay | async)?.name}}</h1>
+  <h3>{{(memberToDisplay | async)?.title}}</h3>
 </div>
