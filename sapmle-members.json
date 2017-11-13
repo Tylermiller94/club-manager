@@ -1,0 +1,14 @@
+{ "members": [{
+    "name": "James",
+    "role": "president",
+    "id": "1"
+    }, {
+    "name": "Charlie",
+    "role": "vice-president",
+    "id": "2"
+    }, {
+    "name": "Momiji",
+    "role": "Treasurer",
+    "id": "3"
+  }]
+}
