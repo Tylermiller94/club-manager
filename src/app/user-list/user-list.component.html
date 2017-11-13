@@ -5,8 +5,8 @@
   </div>
 </div> -->
 
-<div *ngFor="let member of members">
+<div *ngFor="let member of members" (click)="goToDetailPage(member)" class="panel panel-default">
   <div class="panel-body">
-    <h3><em>{{album.name}}</em> by {{album.title}}</h3>
+    <h3><em>{{member.name}}</em> by {{member.title}}</h3>
   </div>
 </div>

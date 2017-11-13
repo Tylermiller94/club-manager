@@ -17,6 +17,6 @@ export class MemberlistComponent {
 
  ];
  goToDetailPage(clickedMember: Member) {
-   this.router.navigate(['clickedMember.id']);
+   this.router.navigate(['members','clickedMember.id']);
  };
 }
